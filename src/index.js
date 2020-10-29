@@ -4,28 +4,34 @@
 //  Select the following single elements from the div.card
 
 // A- finding across the entire DOM
-const header = null
-const logoTitle = null
-const firstCard = null
+const header = document.getElementsByTagName("header")
+const logoTitle = document.getElementById("logoTitle")
+const firstCard = document.getElementsByClassName("card")
 // B- finding within one particular element
-const imageFirstCard = null
-const titleFirstCard = null
-const subtitleFirstCard = null
-const textFirstCard = null
+const imageFirstCard = document.getElementsByClassName("card-img-top")
+const titleFirstCard = document.getElementsByClassName("card-title")
+const subtitleFirstCard = document.getElementsByClassName("card-subtitle")
+const textFirstCard = document.getElementsByClassName("card-text")
 // C- traversing with dot notation
-const link1FirstCard = null
-const link2FirstCard = null
+const link1FirstCard = textFirstCard.nextElementSibling
+const link2FirstCard = link1FirstCard.nextElementSibling
 
 
 // 👉 2- Finding collections of elements in the DOM
 // A- Find all the anchor tags inside the nav element
+const navAnchors = document.querySelectorAll("nav a")
 // B- Loop over the links and console.log their text content
+navAnchors.forEach(anchor => console.log(anchor.textContent))
 // C- Turn the collection of links into a real array
+const anchorArr = Array.from(navAnchors)
 // D- Use .filter to find the anchor tag with the textContent of "Home"
-
+const homeAnchor = anchorArr.filter(item => item.textContent === "Home")
 
 // 👉 3- Changing an element's text content
 //  A- Change the cat-related content into dog-related content
+document.querySelector('h1').textContent = "Lambda Dog"
+document.querySelector('img.card-img-top').src = "https://unsplash.com/photos/RR-FwGB6PEU";
+
 //  B- Have the students research online the difference between textContent and innerText
 
 
