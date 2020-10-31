@@ -97,6 +97,10 @@ img {
 .card-group .card .card-link + .card-link {
   margin-left: 1.25rem;
 }
+.doggyText {
+  background-color: lightblue;
+  color:white;
+}
 h4,
 h5 {
   margin-top: 0;
